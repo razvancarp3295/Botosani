@@ -1,0 +1,96 @@
+- title: "Planning and wireframes"
+  body: |-
+    ## Description
+
+    Decide on the topic for your homework, and whether you want to continue from the website you built in the first project or start fresh.
+
+    Then, start by planning your website layouts, color palette and more.
+
+    ## Acceptance criteria
+
+    Check the items in the list below, as you are doing them:
+
+    - [ ] Read through all the issues to understand the scope of the work that needs to be done.
+    - [ ] Create a low fidelity wireframe using one of the following tools:
+      - pen and paper
+      - a software tool like [Balsamiq](https://balsamiq.com/), [Figma](https://www.figma.com/), [Moqups](https://moqups.com/), [Miro](https://miro.com/templates/low-fidelity-wireframes/) or any other tool
+    - [ ] Add the wireframe to this repository, either as images or a PDF, or as a link in the `README.MD` file if you used an online tool.
+    - [ ] Create an organized website structure
+      - Assets (images, videos)
+        - Should be in a separate folder.
+        - Their file names need to clearly indicate what they are.
+        - Consider if you want some assets to also be organized in folders depending on the page they are used in.
+      - Styles (CSS files)
+        - In a separate folder.
+        - You will likely need a `global` css file that is used across all pages, and separate css files that are used only on a single page.
+        - Read through [Organizing CSS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Organizing).
+- title: "Implement the site header"
+  body: |-
+    ## Description
+
+    The site header contains the visual identity of your website, with a logo, a title and a headline, and, more importantly, a navigation menu allowing the user to navigate to other pages, and see where they currently are.
+
+    ## Acceptance criteria
+
+    - [ ] Choose a navigation structure of your liking. See [website navigation examples](https://blog.hubspot.com/website/main-website-navigation-ht) and the [menu design checklist](https://www.nngroup.com/articles/menu-design/).
+    - [ ] Header shows a site logo
+    - [ ] Header shows a site title
+    - [ ] Header shows a headline
+    - [ ] Header shows a navigation menu that allows the user to move to other pages
+    - [ ] The current page the user is on is highlighted in the navigation
+    - [ ] On mobile devices, the navigation collapses and shows a hamburger menu. See [here](https://alvarotrigo.com/blog/hamburger-menu-css/) for a CSS-only implementation.
+- title: "Improve the landing page"
+  body: |-
+    ## Description
+
+    The landing page of your website is the first thing your users see. Choose a layout and contents of your liking, using something like [Landingfolio](https://www.landingfolio.com/inspiration) for inspiration.
+
+    ## Acceptance criteria
+
+    - [ ] The navigation menu from the _Implement the site header_ issue is nicely incorporated into the page
+    - [ ] CSS [`display: grid`](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) is used
+    - [ ] Images are animated when the user hovers over them
+      - See [examples](https://freefrontend.com/css-image-effects/) and read about [CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using).
+      - Respect users who prefer less motion, using [`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion).
+      - Whichever you choose, you must be able to explain HOW it works.
+    - [ ] The landing page is responsive and looks good on mobile devices through the use of [responsive design](https://web.dev/articles/responsive-web-design-basics)
+- title: "Improve the history page"
+  body: |-
+    ## Description
+
+    The history page needs to be improved to look much nicer and actually display the history of your topic.
+
+    ## Acceptance criteria
+
+    - [ ] Choose a visual timeline design to show the events related to your topic. See:
+      - https://freefrontend.com/css-timelines/
+      - https://alvarotrigo.com/blog/html-css-timelines/
+    - [ ] Implement the timeline for your topic.
+    - [ ] Whichever you choose, you must be able to explain HOW it works.
+- title: "Improve the How It Works page"
+  body: |-
+    ## Description
+
+    Improve the page that explains how your topic works, such as its rules or general guidelines.
+
+    ## Acceptance criteria
+
+    - [ ] Layout the page using either `display: flex` or `display: grid`.
+    - [ ] Improve the general styling of the page to match the landing page and the timeline page.
+    - [ ] Add a slideshow gallery with images.
+      - For a simple one, use [CSS scroll snap](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts).
+      - Or choose one of these [CSS carousels](https://freefrontend.com/css-carousels/) or [CSS galleries](https://freefrontend.com/css-gallery/).
+      - Whichever you choose, you must be able to explain HOW it works.
+- title: "Improve styling for the notable people page"
+  body: |-
+    ## Description
+
+    The notable people page is currently just a simple table. It needs to be improved to look better.
+
+    ## Acceptance criteria
+
+    You have complete freedom here. Just have fun and make it look nice. You can keep the table, or drop it and reorganize the information in a different layout.
+
+    - [ ] The page styling matches the rest of the website.
+    - [ ] All photos have consistent sizes and meaningful `alt` text.
+    - [ ] The page is responsive and looks good on mobile devices.
