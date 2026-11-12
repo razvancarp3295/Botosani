@@ -260,7 +260,95 @@ footer {
 }
 
 /* Responsivitate pentru ecrane mici / mobile */
+/* --- ADAPTARE PENTRU TELEFOANE (Max 768px) --- */
 @media (max-width: 768px) {
+    /* Forțăm bannerul să aibă spațiu suficient și flexbox corect */
+    .hero-banner {
+        padding: 4rem 1rem 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Anulăm poziționarea absolută pe mobil ca să stea frumos în mijloc */
+    .hero-top-left {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0.8rem;
+        gap: 5px;
+    }
+
+    .hero-slogan {
+        text-align: center;
+    }
+
+    .hero-banner h1 {
+        font-size: 2.2rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Iconița hamburger plasată corect în dreapta-sus în interiorul bannerului verde */
+    .hamburger-icon {
+        display: block;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: white;
+        z-index: 1001;
+    }
+
+    /* Meniul ascuns care se deschide la tap */
+    header nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        background-color: #1e3f20;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    header nav li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hamburger-checkbox:checked ~ nav {
+        max-height: 300px;
+    }
+
+    /* Aranjarea elementelor sub banner (harta și tabelul una sub alta) */
+    .map-and-table-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .map-box, table {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}@media (max-width: 768px) {
     .hero-banner {
         padding: 4rem 1rem 2rem 1rem; /* Facem loc sus pentru iconiță */
     }
