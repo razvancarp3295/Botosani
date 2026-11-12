@@ -7,71 +7,100 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+   
+ <!-- Bannerul mare de sus (separat de header, cu sigla mică în colț) -->
+    <div class="hero-banner" style="position: relative;">
+        <div class="hero-top-left" style="position: absolute; top: 15px; left: 20px; display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/logo-judetul-botosani.png" alt="Stema Botoșani" class="hero-logo" style="width: 32px; height: 32px; object-fit: contain;">
+            <p class="hero-slogan" style="font-size: 0.85rem; color: #a3e4d7; font-style: italic; margin: 0;">Botoșani - Pământ de poezie și istorie</p>
+        </div>
+        <h1>Botoșani</h1>
+    </div>
+   <!-- Bara de navigare actualizată -->
     <header>
+        <!-- Butonul checkbox și iconița pentru meniul hamburger -->
+        <input type="checkbox" id="menu-toggle" class="hamburger-checkbox">
+        <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+
         <nav>
             <ul>
-                <li><a href="index.html">Prezentare Generală</a></li>
+                <li><a href="index.html" class="active">Prezentare Generală</a></li>
                 <li><a href="history.html">Istoric</a></li>
                 <li><a href="how-it-works.html">Cum funcționează</a></li>
                 <li><a href="notable-people.html">Personalități</a></li>
             </ul>
         </nav>
     </header>
-
+    <!-- Conținut Principal -->
     <main>
         <h1>Personalități din Botoșani</h1>
         <p>Botoșani este reputat pentru faptul că este locul de naștere al multor figuri culturale și savanți români influenți.</p>
 
+        <!-- Secțiune cu idei principale înainte de tabel -->
+        <section>
+            <h2>Contribuții Majore la Cultura Românească</h2>
+            <p>Județul Botoșani a dăruit României și lumii întregi minți strălucite care au definit literatura, muzica, istoria, arta și știința. Iată câteva aspecte esențiale despre moștenirea lăsată de acești iluștri înaintași:</p>
+            <ul>
+                <li><strong>Geniul poeziei naționale:</strong> Poezia lui Mihai Eminescu continuă să reprezinte piatra de temelie a liricii românești universale.</li>
+                <li><strong>Patrimoniul muzical:</strong> George Enescu a pus muzica românească pe harta mondială prin creații simfonice monumentale.</li>
+                <li><strong>Școala istorică și științifică:</strong> Personalități precum Nicolae Iorga și Grigore Antipa au dus faima științei românești peste hotare, fondând instituții de referință.</li>
+                <li><strong>Sensibilitatea artistică:</strong> Arta vizuală românească a fost revoluționată prin perspectivele unice aduse de maeștri precum Ștefan Luchian.</li>
+            </ul>
+        </section>
+
+        <!-- Secțiunea Tabelului cu Personalități și Fotografii -->
         <section>
             <h2>Personalități Importante</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Nume</th>
-                        <th>Fotografie</th>
-                        <th>Vârstă</th>
-                        <th>Detalii</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/Mihai_Eminescu" target="_blank">Mihai Eminescu</a></td>
-                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mihai_Eminescu_1869_photo.jpg/220px-Mihai_Eminescu_1869_photo.jpg" alt="Mihai Eminescu" height="100"></td>
-                        <td>39</td>
-                        <td><p>Considerat cel mai faimos și influent poet român din toate timpurile.</p></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/George_Enescu" target="_blank">George Enescu</a></td>
-                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/George_Enescu_1930.jpg/220px-George_Enescu_1930.jpg" alt="George Enescu" height="100"></td>
-                        <td>73</td>
-                        <td><p>Compozitor, violonist, pianist, dirijor și profesor renascentist.</p></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/Nicolae_Iorga" target="_blank">Nicolae Iorga</a></td>
-                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nicolae_Iorga_portret.jpg/220px-Nicolae_Iorga_portret.jpg" alt="Nicolae Iorga" height="100"></td>
-                        <td>69</td>
-                        <td><p>Istoric, critic literar, dramaturg, poet și politician de seamă.</p></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/Stefan_Luchian" target="_blank">Ștefan Luchian</a></td>
-                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Stefan_Luchian_Autoportret.jpg/220px-Stefan_Luchian_Autoportret.jpg" alt="Stefan Luchian" height="100"></td>
-                        <td>48</td>
-                        <td><p>Pictor celebru, cunoscut pentru peisajele, portretele și naturile statice realizate.</p></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/Grigore_Antipa" target="_blank">Grigore Antipa</a></td>
-                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Grigore_Antipa.jpg/220px-Grigore_Antipa.jpg" alt="Grigore Antipa" height="100"></td>
-                        <td>76</td>
-                        <td><p>Biolog darwinist care a studiat fauna Deltei Dunării și a Mării Negre.</p></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="map-and-table-container" style="display: block;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NUME</th>
+                            <th>FOTOGRAFIE</th>
+                            <th>VÂRSTĂ</th>
+                            <th>DETALII</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://ro.wikipedia.org/wiki/Mihai_Eminescu" target="_blank">Mihai Eminescu</a></td>
+                            <td><img src="assets/images/mihai-eminescu.jpeg" alt="Mihai Eminescu" style="width: 80px; height: auto; border-radius: 4px;"></td>
+                            <td>39</td>
+                            <td>Considerat cel mai faimos și influent poet român din toate timpurile.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://ro.wikipedia.org/wiki/George_Enescu" target="_blank">George Enescu</a></td>
+                            <td><img src="assets/images/george-enescu.jpeg" alt="George Enescu" style="width: 80px; height: auto; border-radius: 4px;"></td>
+                            <td>73</td>
+                            <td>Compozitor, violonist, pianist, dirijor și profesor renascentist.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://ro.wikipedia.org/wiki/Nicolae_Iorga" target="_blank">Nicolae Iorga</a></td>
+                            <td><img src="assets/images/nicolae-iorga.jpeg" alt="Nicolae Iorga" style="width: 80px; height: auto; border-radius: 4px;"></td>
+                            <td>69</td>
+                            <td>Istoric, critic literar, dramaturg, poet și politician de seamă.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://ro.wikipedia.org/wiki/Ștefan_Luchian" target="_blank">Ștefan Luchian</a></td>
+                            <td><img src="assets/images/stefan-luchian.jpg" alt="Ștefan Luchian" style="width: 80px; height: auto; border-radius: 4px;"></td>
+                            <td>48</td>
+                            <td>Pictor celebru, cunoscut pentru peisajele, portretele și naturile statice realizate.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://ro.wikipedia.org/wiki/Grigore_Antipa" target="_blank">Grigore Antipa</a></td>
+                            <td><img src="assets/images/grigore-antipa.jpeg" alt="Grigore Antipa" style="width: 80px; height: auto; border-radius: 4px;"></td>
+                            <td>76</td>
+                            <td>Biolog darwinist care a studiat fauna Deltei Dunării și a Mării Negre.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 
+    <!-- Subsol -->
     <footer>
-        <p>Proiect Personalități Botoșani</p>
+        <p>&copy; 2026 Botoșani Guide Project. Toate drepturile rezervate.</p>
     </footer>
 
 </body>

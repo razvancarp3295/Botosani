@@ -11,12 +11,43 @@ body {
     min-height: 100vh;
 }
 
-/* --- BANNER-UL MARE DE SUS (BOTOȘANI) --- */
+/* --- BANNER-UL MARE DE SUS (BOTOȘANI) CU LOGO ȘI SLOGAN ÎN STANGA-SUS --- */
 .hero-banner {
     background-color: #234e38; /* Verde-pădure profund și elegant */
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
+    position: relative;
     text-align: center;
     box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Containerul care ține logo-ul și sloganul în stânga sus */
+.hero-top-left {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-logo {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.hero-slogan {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 1rem;
+    color: #a3e4d7;
+    font-style: italic;
+    margin: 0;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .hero-banner h1 {
@@ -168,4 +199,126 @@ footer {
     color: #fff;
     margin-top: auto;
     border-top: 5px solid #2e7d32;
+}
+
+/* --- STILURI PENTRU MENIU HAMBURGER (MOBILES) --- */
+.hamburger-checkbox {
+    display: none;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero-top-left {
+        position: static;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-slogan {
+        text-align: center;
+    }
+
+    .hamburger-icon {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 1.5rem;
+    }
+
+    header nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+    }
+
+    .hamburger-checkbox:checked ~ nav {
+        max-height: 300px;
+    }
+}
+/* --- CERINȚE PENTRU ISSUE 3: GRID, HOVER ȘI REDUCED-MOTION --- */
+
+/* 1. Transformăm containerul hărții și tabelului în CSS Grid, exact cum se cere */
+.map-and-table-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Responsivitate pentru ecrane mici / mobile */
+@media (max-width: 768px) {
+    .map-and-table-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 2. Animație fină la hover pentru imagini */
+.map-box img, .hero-logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-box img:hover {
+    transform: scale(1.03); /* Efect discret de zoom */
+    box-shadow: 0 8px 20px rgba(30, 63, 32, 0.25);
+}
+
+/* 3. Respectarea utilizatorilor care preferă mai puțină mișcare (Accesibilitate) */
+@media (prefers-reduced-motion: reduce) {
+    .map-box img, .hero-logo {
+        transition: none;
+    }
+    
+    .map-box img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+/* --- STILURI PENTRU CARUSELUL DE IMAGINI (SLIDER) --- */
+.image-slider-container {
+    width: 100%;
+    overflow-x: auto; /* Activează scroll-ul orizontal */
+    white-space: nowrap;
+    padding: 1rem 0;
+    scrollbar-color: #2e7d32 #e8f5e9; /* Stilizare bară de derulare pentru browsere moderne */
+}
+
+.slider-track {
+    display: inline-flex;
+    gap: 1.5rem;
+}
+
+.slide-item {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(30, 63, 32, 0.1);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.slide-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.slide-item img:hover {
+    transform: scale(1.03); /* Efect de hover păstrat din cerințe */
 }

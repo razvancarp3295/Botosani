@@ -1,45 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>How It Works - Botoșani</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cum funcționează și Timp Liber - Botoșani</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+      
+ <!-- Bannerul mare de sus (separat de header, cu sigla mică în colț) -->
+    <div class="hero-banner" style="position: relative;">
+        <div class="hero-top-left" style="position: absolute; top: 15px; left: 20px; display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/logo-judetul-botosani.png" alt="Stema Botoșani" class="hero-logo" style="width: 32px; height: 32px; object-fit: contain;">
+            <p class="hero-slogan" style="font-size: 0.85rem; color: #a3e4d7; font-style: italic; margin: 0;">Botoșani - Pământ de poezie și istorie</p>
+        </div>
+        <h1>Botoșani</h1>
+    </div>
+   <!-- Bara de navigare actualizată -->
     <header>
+        <!-- Butonul checkbox și iconița pentru meniul hamburger -->
+        <input type="checkbox" id="menu-toggle" class="hamburger-checkbox">
+        <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+
         <nav>
             <ul>
-                <li><a href="index.html">Overview</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="notable-people.html">Notable People</a></li>
+                <li><a href="index.html" class="active">Prezentare Generală</a></li>
+                <li><a href="history.html">Istoric</a></li>
+                <li><a href="how-it-works.html">Cum funcționează</a></li>
+                <li><a href="notable-people.html">Personalități</a></li>
             </ul>
         </nav>
     </header>
-
+    <!-- Conținut Principal -->
     <main>
-        <h1>How Botoșani Works</h1>
-        <p>Discover how public administration, tourism, and daily life function in Botoșani.</p>
+        <h1>Ghidul Timpului Liber și al Atracțiilor din Botoșani</h1>
+        <p>Descoperă cum este organizat orașul nostru și unde îți poți petrece timpul liber, de la parcuri moderne și zone de agrement, până la cultură, muzee și seri relaxante în natură.</p>
 
+        <!-- Secțiunea 1: Cum funcționează județul și administrația -->
         <section>
-            <h2>City Administration & Guides</h2>
-            <p>The local municipality manages urban infrastructure, cultural landmarks, and public transportation to ensure a high quality of life.</p>
+            <h2>Cum funcționează județul Botoșani</h2>
+            <p>Administrația locală și județeană coordonează dezvoltarea infrastructurii urbane, serviciile publice și conservarea patrimoniului cultural și natural. Prin proiecte moderne de amenajare urbană, autoritățile sprijină atât întreținerea zonelor verzi, cât și viața civică și turistică din regiune.</p>
+        </section>
 
-            <details>
-                <summary>Click to view visitor guidelines and tips</summary>
-                <p>Visitors are encouraged to explore the historical Old Town on foot and visit local museums during standard operating hours (9:00 AM - 5:00 PM).</p>
-            </details>
+        <!-- Secțiunea 2: Parcul Cornișa -->
+        <section>
+            <h2>Parcul Cornișa - Centrul de Agrement și Sport</h2>
+            <p>Parcul Cornișa este cel mai modern complex de agrement și sport din județ, întins pe zeci de hectare. Oferă facilități multiple pentru toate vârstele: patinoar, terenuri de sport, zone de plimbare și un parc acvatic spectaculos.</p>
+            <div class="map-and-table-container">
+                <div class="map-box">
+                    <img src="assets/images/cornisa-satelit.jpeg" alt="Parcul Cornișa satelit">
+                    <div class="caption">Vedere aeriană Parcul Cornișa</div>
+                </div>
+                <div class="map-box">
+                    <img src="assets/images/Cornisa.Foto_.Logo_.ZZR-12-of-22.jpg" alt="Parcul Cornișa peisaj">
+                    <div class="caption">Complexul Cornișa - Facilități de agrement</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea 3: Parcul de Agrement Pacea -->
+        <section>
+            <h2>Parcul de Agrement Pacea</h2>
+            <p>Un spațiu verde tradițional, ideal pentru plimbări în aer liber, alergare și relaxare într-un cadru liniștit, departe de agitația cotidiană.</p>
+        </section>
+
+        <!-- Secțiunea 4: Lacul cu Nuferi -->
+        <section>
+            <h2>Plimbare și Seri de Film la Lacul cu Nuferi</h2>
+            <p>O plimbare relaxantă până la pitorescul <strong>Lac cu Nuferi</strong> te va purta printr-un peisaj feeric, plin de vegetație. În serile calde, zona prinde viață prin evenimente speciale de tipul <em>„seară eminesciană / seară de film în aer liber”</em>, unde vizitatorii se pot bucura de proiecții cinematografice sub cerul înstelat.</p>
+            <div class="image-slider-container">
+        <div class="slider-track">
+            <div class="slide-item">
+                    <img src="assets/images/lac%20cu%20nuferi.jpeg" alt="Lacul cu nuferi">
+                    <div class="caption">Lacul cu nuferi - Peisaj natural</div>
+                </div>
+                <div class="map-box">
+                    <img src="assets/images/lac%20cu%20nuferi%20inflorti.jpeg" alt="Lacul cu nuferi înfloriți">
+                    <div class="caption">Nuferi înfloriți pe lac</div>
+                </div>
+                <div class="map-box">
+                    <img src="assets/images/seara%20eminesciana.jpeg" alt="Seara eminesciană">
+                    <div class="caption">Seri de film în aer liber</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea 5: Teatrul Mihai Eminescu -->
+        <section>
+            <h2>Teatrul „Mihai Eminescu” </h2>
+            <p>După o perioadă lungă de renovare și așteptare, emblematicul <strong>Teatru „Mihai Eminescu”</strong> și-a redeschis porțile, punând din nou Botoșaniul pe harta culturală a țării. Clădirea impresionează printr-o arhitectură exterioară magnifică și un interior somptuos.</p>
+            <div class="map-and-table-container">
+                <div class="map-box">
+                    <img src="assets/images/teatru-exterior.jpeg" alt="Teatrul Mihai Eminescu exterior">
+                    <div class="caption">Teatrul Mihai Eminescu - Exterior</div>
+                </div>
+                <div class="map-box">
+                    <img src="assets/images/interior-teatru.jpeg" alt="Interior Teatrul Mihai Eminescu">
+                    <div class="caption">Teatrul Mihai Eminescu - Interior</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea 6: Case Memoriale și Muzee -->
+        <section>
+            <h2>Case Memoriale și Muzee</h2>
+            <p>Botoșaniul este un ținut al marilor personalități culturale. Poți vizita numeroase muzee și case memoriale care păstrează vie memoria unor figuri ilustre precum Mihai Eminescu (la Ipotești), George Enescu, Nicolae Iorga sau Ștefan Luchian, oferind o incursiune fascinantă în istoria artei și a literaturii române.</p>
+       <!-- Containerul cu derulare orizontală -->
+    <div class="image-slider-container">
+        <div class="slider-track">
+            <div class="slide-item">
+                <img src="assets/images/casa-mihai-e.jpg" alt="Memorialul Ipotești">
+                <div class="caption">Memorialul Ipotești - Casa Eminescu</div>
+            </div>
+            <div class="slide-item">
+                <img src="assets/images/casa-stefan-l.jpeg" alt="Memorialul Ştefan Luchian">
+                <div class="caption">Muzeul Memorial Ştefan Luchian </div>
+            </div>
+            <div class="slide-item">
+                <img src="assets/images/casa-george-e.jpg" alt="Muzeul George Enescu">
+                <div class="caption">Muzeul Memorial George Enescu (Liveni)</div>
+            </div>
+            <div class="slide-item">
+                <img src="assets/images/casa-n-iorga.jpeg" alt="Casa Nicolae Iorga">
+                <div class="caption">Casa Memorială Nicolae Iorga</div>
+                
+            </div>
         </section>
 
         <section>
-            <h2>Exploring Botoșani</h2>
-            <p>Watch a video presentation highlighting the key locations and culture of the city:</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/I58RiZua9fg" title="Botoșani Video" frameborder="0" allowfullscreen></iframe>
-        </section>
+    <h2>„Marea Nordului” de la Stânca-Costești</h2>
+    <p>Aflată pe cursul râului Prut, zona de la <strong>Stânca-Costești</strong> este supranumită de localnici <em>„Marea Nordului”</em> datorită întinderii sale impresionante de apă. Este cel mai important nod hidrotehnic din județ, dar și un punct de atracție de o frumusețe rară, ideal pentru iubitorii de peisaje spectaculoase, pescuit și liniște în mijlocul naturii.</p>
+ <div class="image-slider-container">
+        <div class="slider-track">
+            <div class="slide-item">
+                <img src="assets/images/marea-nordului.webp">
+            </div>
+             <div class="slide-item">
+                <img src="assets/images/marea-nord.jpeg">
+            </div>
+ <div class="slide-item">
+                <img src="assets/images/marea-nordului-stancesti-mare-moldovei-3.jpeg">
+            </div>
+
+
+</section>
+
     </main>
 
+   
+
+    <!-- Subsol -->
     <footer>
-        <p>Botoșani Guide Project</p>
+        <p>&copy; 2026 Botoșani Guide Project. Toate drepturile rezervate.</p>
     </footer>
 
 </body>
