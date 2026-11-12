@@ -261,15 +261,49 @@ footer {
 
 /* Responsivitate pentru ecrane mici / mobile */
 @media (max-width: 768px) {
+    .hero-banner {
+        padding: 4rem 1rem 2rem 1rem; /* Facem loc sus pentru iconiță */
+    }
+
+    .hero-top-left {
+        position: static;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-slogan {
+        text-align: center;
+    }
+
+    /* Poziționăm iconița hamburger direct în colțul dreapta-sus al bannerului verde */
     .hamburger-icon {
         display: block;
         position: absolute;
-        right: 2rem;
+        right: 1.5rem;
         top: 1.5rem;
-        color: #1e3f20; /* Schimbăm culoarea în verde închis pe mobil ca să se vadă perfect */
-        background-color: rgba(255, 255, 255, 0.8); /* Opțional: un fundal fin pentru vizibilitate */
-        padding: 2px 8px;
-        border-radius: 4px;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #ffffff; /* Alb ca să se vadă perfect pe verde */
+        z-index: 1001;
+    }
+
+    header nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        background-color: #1e3f20;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .hamburger-checkbox:checked ~ nav {
+        max-height: 300px;
     }
 }
 
