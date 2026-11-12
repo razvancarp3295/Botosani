@@ -322,3 +322,67 @@ footer {
 .slide-item img:hover {
     transform: scale(1.03); /* Efect de hover păstrat din cerințe */
 }
+
+/* --- DESIGN NOU ȘI CURAT PENTRU TIMELINE (ISTORIC) --- */
+.timeline-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 4px solid #2e7d32; /* Linia verde verticală elegantă în stânga */
+}
+
+.timeline-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(30, 63, 32, 0.12);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Bulina verde de pe linia verticală pentru fiecare card */
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    left: -2.35rem;
+    top: 1.8rem;
+    width: 14px;
+    height: 14px;
+    background-color: #2e7d32;
+    border: 3px solid #f4f9f4;
+    border-radius: 50%;
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(30, 63, 32, 0.2);
+}
+
+.timeline-year {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 0.6rem;
+}
+
+.timeline-body h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1e3f20;
+    font-family: 'Georgia', serif;
+    font-size: 1.3rem;
+}
+
+.timeline-body p {
+    margin: 0;
+    font-size: 1rem;
+    color: #334e3b;
+    line-height: 1.6;
+}
