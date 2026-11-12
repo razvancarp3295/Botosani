@@ -1,0 +1,171 @@
+/* --- STILURI GENERALE --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f9f4; /* Un fundal general foarte deschis, cu tentă verzuie naturală */
+    color: #2c3e35;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- BANNER-UL MARE DE SUS (BOTOȘANI) --- */
+.hero-banner {
+    background-color: #234e38; /* Verde-pădure profund și elegant */
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-banner h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.5rem;
+    letter-spacing: 0.3rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: #ffffff; /* Text alb strălucitor */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* --- ANTET ȘI MENIU DE NAVIGARE (În nuanțe de verde) --- */
+header {
+    background-color: #1e3f20; /* Verde închis intens pentru meniu */
+    color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: #a3e4d7; /* Verde mentă deschis la trecerea mouse-ului */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- CONȚINUT PRINCIPAL --- */
+main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    color: #1e3f20; /* Titluri în verde închis */
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #2e7d32; /* Linie decorativă verde */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #334e3b;
+    margin-bottom: 1.5rem;
+}
+
+/* --- ARANJAMENT HARTĂ ȘI TABEL --- */
+.map-and-table-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.map-box {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.map-box img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(30, 63, 32, 0.15);
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: #55705e;
+    font-style: italic;
+    margin-top: 0.8rem;
+}
+
+/* --- TABELE STILIZATE ÎN VERDE --- */
+table {
+    flex: 1;
+    min-width: 300px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 8px rgba(30, 63, 32, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #c8e6c9; /* Margini verzi deschise */
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #2e7d32; /* Antetul tabelului în verde vibrant */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+thead tr:first-child th:first-child { border-top-left-radius: 8px; }
+thead tr:first-child th:last-child { border-top-right-radius: 8px; }
+tbody tr:last-child td:first-child { border-bottom-left-radius: 8px; }
+tbody tr:last-child td:last-child { border-bottom-right-radius: 8px; }
+
+tr:nth-child(even) {
+    background-color: #e8f5e9; /* Rânduri alternative într-un verde pastel extrem de fin */
+}
+
+tr:hover td {
+    background-color: #c8e6c9; /* Efect hover verde deschis */
+}
+
+/* --- SUBSOL --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1e3f20; /* Subsol asortat cu meniul de sus */
+    color: #fff;
+    margin-top: auto;
+    border-top: 5px solid #2e7d32;
+}
